@@ -78,4 +78,18 @@ public class LinkedList<T> {
         }
         return false;
     }
+
+    public boolean delete(T data){
+        Node<T> searchedNode = search(data);
+
+        if(searchedNode!=null){
+            Node<T> temp = head;
+            while(temp.next != searchedNode)
+                temp= temp.next;
+            temp.next= searchedNode.next;
+            searchedNode.next= null;
+            return true;
+        }
+        return false;
+    }
 }

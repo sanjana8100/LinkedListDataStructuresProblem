@@ -54,5 +54,13 @@ public class LinkedListMain {
         else
             System.out.println("Element is not Inserted");
         linkedList2.show();
+
+        //DELETE METHOD
+        boolean isDeleted= linkedList2.delete(40);
+        if(isDeleted)
+            System.out.println("Element Deleted Successfully");
+        else
+            System.out.println("Element is not Deleted");
+        linkedList2.show();
     }
 }
