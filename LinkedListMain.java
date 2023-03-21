@@ -37,5 +37,12 @@ public class LinkedListMain {
         else
             System.out.println("The Element Popped is: "+pop2);
         linkedList2.show();
+
+        //SEARCH METHOD
+        Node<Integer> searchedData = linkedList2.search(30);
+        if(searchedData == null)
+            System.out.println("Element not found!");
+        else
+            System.out.println("Element Found");
     }
 }
