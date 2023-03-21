@@ -5,7 +5,7 @@ public class LinkedList<T> {
     Node<T> tail;
 
     public void push(T data) {
-        Node<T> newNode = new Node(data);
+        Node<T> newNode = new Node<>(data);
         if (head == null) {
             head = newNode;
             tail = newNode;
@@ -16,14 +16,13 @@ public class LinkedList<T> {
     }
 
     public void append(T data){
-        Node<T> newNode = new Node(data);
+        Node<T> newNode = new Node<>(data);
         if(head == null){
             head=newNode;
-            tail=newNode;
         } else {
             tail.next=newNode;
-            tail=newNode;
         }
+        tail=newNode;
     }
 
     public void show() {
@@ -33,5 +32,13 @@ public class LinkedList<T> {
             temp = temp.next;
         }
         System.out.println();
+    }
+
+    public T pop() {
+        if (head == null)
+            return null;
+        T popData = head.data;
+        head = head.next;
+        return popData;
     }
 }
