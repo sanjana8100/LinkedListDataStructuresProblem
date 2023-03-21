@@ -27,5 +27,15 @@ public class LinkedListMain {
         else
             System.out.println("The Element Popped is: "+pop1);
         linkedList2.show();
+
+        //POP LAST METHOD
+        linkedList2.push(56);
+
+        Integer pop2= linkedList2.popLast();
+        if(pop2==null)
+            System.out.println("Linked List Is Empty");
+        else
+            System.out.println("The Element Popped is: "+pop2);
+        linkedList2.show();
     }
 }
