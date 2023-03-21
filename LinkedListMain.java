@@ -44,5 +44,15 @@ public class LinkedListMain {
             System.out.println("Element not found!");
         else
             System.out.println("Element Found");
+
+        //INSERT AFTER METHOD
+        linkedList2.append(70);
+
+        boolean isInserted= linkedList2.insertAfter(30, 40);
+        if(isInserted)
+            System.out.println("Element Inserted Successfully");
+        else
+            System.out.println("Element is not Inserted");
+        linkedList2.show();
     }
 }
