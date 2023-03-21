@@ -1,6 +1,6 @@
 package com.bridgelabz.LinkedList;
 
-public class LinkedList<T> {
+public class LinkedList<T extends Comparable<T>> {
     Node<T> head;
     Node<T> tail;
 
@@ -91,5 +91,15 @@ public class LinkedList<T> {
             return true;
         }
         return false;
+    }
+
+    public void Size() {
+        Node<T> temp = head;
+        int count=0;
+        while(temp!=null){
+            temp=temp.next;
+            count++;
+        }
+        System.out.println("Size of the linked list is "+count);
     }
 }
