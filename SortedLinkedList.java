@@ -1,18 +1,17 @@
 package com.bridgelabz.LinkedList;
 
-public class SortedLinkedList<T extends Comparable<T>> {
+public class SortedLinkedList<T extends Comparable<T>> extends LinkedList<T> {
     Node<T> head;
     Node<T> tail;
 
-    public void add(T data){
+    public void append(T data){
         Node<T> newNode = new Node<>(data);
         if(head == null) {
             head = newNode;
-            tail = newNode;
         } else {
             tail.next= newNode;
-            tail= newNode;
         }
+        tail = newNode;
         sortList();
     }
 
@@ -36,6 +35,7 @@ public class SortedLinkedList<T extends Comparable<T>> {
         }
     }
 
+    @Override
     public void show() {
         Node<T> temp = head;
         while (temp != null) {

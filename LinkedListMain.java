@@ -66,10 +66,10 @@ public class LinkedListMain {
 
         //SORTED ARRAY CLASS
         SortedLinkedList<Integer> sortedList = new SortedLinkedList<>();
-        sortedList.add(56);
-        sortedList.add(30);
-        sortedList.add(40);
-        sortedList.add(70);
+        sortedList.append(56);
+        sortedList.append(30);
+        sortedList.append(40);
+        sortedList.append(70);
 
         System.out.println("Sorted Linked List:");
         sortedList.show();
